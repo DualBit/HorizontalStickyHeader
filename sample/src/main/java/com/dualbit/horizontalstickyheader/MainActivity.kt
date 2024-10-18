@@ -5,18 +5,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dualbit.horizontalstickyheader.databinding.ActivityMainBinding
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var viewBinding: ActivityMainBinding
     lateinit var adapter: MainAdapter
 
-    val headerDecoration by lazy {
+    private val headerDecoration by lazy {
         HHeaderItemDecoration(viewBinding.rclMain, shouldFadeOutHeader = false) {
             viewBinding.rclMain.isSectionViewType(it, adapter)
         }
@@ -36,21 +33,28 @@ class MainActivity : AppCompatActivity() {
 
         adapter = MainAdapter(
             listOf(
-                AdapterItemCell.Section("Sec A"),
-                AdapterItemCell.Cell("Val 1A"),
-                AdapterItemCell.Cell("Val 2A"),
-                AdapterItemCell.Cell("Val 3A"),
-                AdapterItemCell.Cell("Val 4A"),
-                AdapterItemCell.Section("Sec B"),
-                AdapterItemCell.Cell("Val 1B"),
-                AdapterItemCell.Cell("Val 2B"),
-                AdapterItemCell.Cell("Val 3B"),
-                AdapterItemCell.Cell("Val 4B"),
-                AdapterItemCell.Section("Sec C"),
-                AdapterItemCell.Cell("Val 1C"),
-                AdapterItemCell.Cell("Val 2C"),
-                AdapterItemCell.Cell("Val 3C"),
-                AdapterItemCell.Cell("Val 4C"),
+                AdapterItemCell.Section("A"),
+                AdapterItemCell.Cell("1A"),
+                AdapterItemCell.Cell("2A"),
+                AdapterItemCell.Cell("3A"),
+                AdapterItemCell.Cell("4A"),
+                AdapterItemCell.Cell("5A"),
+                AdapterItemCell.Cell("6A"),
+                AdapterItemCell.Cell("7A"),
+                AdapterItemCell.Cell("8A"),
+                AdapterItemCell.Section("B"),
+                AdapterItemCell.Cell("1B"),
+                AdapterItemCell.Cell("2B"),
+                AdapterItemCell.Cell("3B"),
+                AdapterItemCell.Cell("4B"),
+                AdapterItemCell.Section("C"),
+                AdapterItemCell.Cell("1C"),
+                AdapterItemCell.Cell("2C"),
+                AdapterItemCell.Cell("3C"),
+                AdapterItemCell.Cell("4C"),
+                AdapterItemCell.Cell("5C"),
+                AdapterItemCell.Cell("6C"),
+                AdapterItemCell.Cell("7C"),
             )
         )
 
@@ -60,19 +64,9 @@ class MainActivity : AppCompatActivity() {
             false
         )
 
-        /*viewBinding.rclMain.run {
+        viewBinding.rclMain.post {
             viewBinding.rclMain.addItemDecoration(headerDecoration)
-        }*/
-
-//        viewBinding.rclMain.run {
-//            viewBinding.rclMain.addItemDecoration(
-//                HHeaderItemDecoration(
-//                    this,
-//                    shouldFadeOutHeader = false
-//                ) {
-//                    adapter?.getItemViewType(it) == AdapterElementType.Section.viewType
-//                })
-//        }
+        }
 
         viewBinding.rclMain.adapter = adapter
 
