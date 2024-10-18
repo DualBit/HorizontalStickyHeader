@@ -33,7 +33,7 @@ class HHeaderItemDecoration(
         parent.addOnItemTouchListener(object : RecyclerView.SimpleOnItemTouchListener() {
             override fun onInterceptTouchEvent(recyclerView: RecyclerView, motionEvent: MotionEvent): Boolean {
                 return if (motionEvent.action == MotionEvent.ACTION_DOWN) {
-                    motionEvent.x <= currentHeader?.second?.itemView?.right ?: 0
+                    motionEvent.x <= (currentHeader?.second?.itemView?.right ?: 0)
                 } else false
             }
         })
