@@ -19,7 +19,7 @@ To use Horizontal Sticky Headers in your application follow those steps:
 * 1 - Add mavenCentral() to repositories block in the gradle file.
 * 2 - Add `implementation("com.github.dualbit:horizontalstickyheader:1.0.0")` to the dependencies.
 * 3 - Create a normal ``RecyclerView`` and ``RecyclerView.Adapter``.
-* 4 - Create a variable ``headerDecoration`` that provide the required the custom parameter ``AdapterElementType`` to configure the ``HHeaderItemDecoration``.
+* 4 - Create a variable ``headerDecoration`` that provides the required custom parameter ``AdapterElementType`` to configure the ``HHeaderItemDecoration``.
 
 ```kotlin
 
@@ -81,6 +81,11 @@ Do you want to contribute?
 --------------------------
 
 Please, do it! We'd like to improve this library with your help :)
+
+Note
+----
+
+⚠️ This library work only with fixed width in ``RecyclerView.ViewHolder``.
 
 License
 -------
