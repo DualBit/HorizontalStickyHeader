@@ -6,6 +6,11 @@
 This project demonstrates how to implement Horizontal Sticky Headers in a ``RecyclerView`` using a
 ``HHeaderItemDecoration`` a custom ``RecyclerView.ItemDecoration`` class in Kotlin.
 
+Note
+----
+
+⚠️ This library work only with fixed width in ``RecyclerView.ViewHolder``.
+
 Screenshots
 -----------
 
@@ -81,11 +86,6 @@ Do you want to contribute?
 --------------------------
 
 Please, do it! We'd like to improve this library with your help :)
-
-Note
-----
-
-⚠️ This library work only with fixed width in ``RecyclerView.ViewHolder``.
 
 License
 -------
