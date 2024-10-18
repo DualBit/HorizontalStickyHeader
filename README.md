@@ -14,7 +14,7 @@ Screenshots
 Usage
 -----
 
-To use ``HeaderRecyclerView`` in your application follow those steps:
+To use Horizontal Sticky Headers in your application follow those steps:
 
 * 1 - Add mavenCentral() to repositories block in the gradle file.
 * 2 - Add `implementation("com.github.dualbit:horizontalstickyheader:1.0.0")` to the dependencies.
